@@ -1,0 +1,1596 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#"
+     xml:base="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1">
+        <rdfs:comment>An ontology for the 2019 general election results in Belfast constituencies domain.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasAlignment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasAlignment">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#isAlignmentFor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PoliticalAlignment"/>
+        <rdfs:comment>The hasAlignment property represents the relationship between the Party class and the PoliticalAlignment class.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasConstituency -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasConstituency">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#isConstituencyFor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Constituency"/>
+        <rdfs:comment>The hasConstituency property represents the relationship between the Candidate class and the Constituency class.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasElectedParty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasElectedParty">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#isElectedPartyFor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Constituency"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#ElectedParty"/>
+        <rdfs:comment>The hasElectedParty property represents the relationship between the Constituency class and the Party class.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasLessVotesThan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasLessVotesThan">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasMoreVotesThan"/>
+        <rdfs:comment>The hasMoreVotesThan property represents the inverse relationship between the individuals in the Candidate class.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasMoreVotesThan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasMoreVotesThan">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <rdfs:comment>The hasMoreVotesThan property represents the relationship between the individuals in the Candidate class.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasParty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasParty">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#isPartyFor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+        <rdfs:comment>The hasParty property represents the relationship between the Candidate class and the Party class.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#isAlignmentFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#isAlignmentFor">
+        <rdfs:comment>The isAlignmentFor property represents the inverse relationship between the Party class and the PoliticalAlignment class.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#isConstituencyFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#isConstituencyFor">
+        <rdfs:comment>The isConstituencyFor property represents the inverse relationship between the Candidate class and the Constituency class.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#isElectedPartyFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#isElectedPartyFor">
+        <rdfs:comment>The isElectedPartyFor property represents the inverse relationship between the Constituency class and the Party class.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#isPartyFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#isPartyFor">
+        <rdfs:comment>The hasParty property represents the inverse relationship between the Candidate class and the Party class.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasElectorate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasElectorate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasElectorate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:comment>The hasElectorate property represents the number of eligible voters in a constituency.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasMajority -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasMajority">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasMajority"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:comment>The hasMajority property represents the majority held by a party in a constituency.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasOutcomeStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasOutcomeStatus">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasOutcomeStatus"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:comment>The hasOutcomeStatus property represents whether a constituency was held or gained by a party.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasPercentageChangeInVote -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasPercentageChangeInVote">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasPercentageChangeInVote"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:comment>The hasPercentageChangeInVote property represents the % change in the number of votes gained by a candidate in the 2019 general election when compared to the previous election.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasPercentageShareOfVote -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasPercentageShareOfVote">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasPercentageShareOfVote"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:comment>The hasPercentageShareOfVote property represents the % share of the total number of votes gained by a candidate in the 2019 general election when compared to the previous election.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalAveragePercentageChangeOfVote -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalAveragePercentageChangeOfVote">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalAveragePercentageChangeOfVote"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:comment>The hasTotalAveragePercentageChangeOfVote property represents the average % change of votes over all belfast constituencies gained by a party in the 2019 general election when compared to the previous election.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalChangeInSeats -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalChangeInSeats">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalChangeInSeats"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:comment>The hasTotalChangeInSeats property represents the change of seats gained by a party in the 2019 general election when compared to the previous election.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalNumberOfCandidates -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalNumberOfCandidates">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalNumberOfCandidates"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:comment>The hasTotalNumberOfCandidates property represents the total number of candidates a party had standing in the 2019 general election.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalPercentageCandidateSuccessRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalPercentageCandidateSuccessRate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalPercentageCandidateSuccessRate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:comment>The hasTotalPercentageCandidateSuccessRate property represents the % of a parties standing candidates who are successfully elected in the 2019 general election.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalPercentageChangeInVote -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalPercentageChangeInVote">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalPercentageChangeInVote"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:comment>The hasTotalPercentageChangeOfVote property represents the % change of votes gained by a party in the 2019 general election when compared to the previous election.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalPercentageShareOfVote -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalPercentageShareOfVote">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalPercentageShareOfVote"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:comment>The hasTotalPercentageShareOfVote property represents the % share of votes gained by a party in the 2019 general election.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalSeatsWon -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalSeatsWon">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalChangeInSeats"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:comment>The hasTotalSetasWon property represents the total number of seats won by a party in the 2019 general election when compared to the previous election.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalVoteCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalVoteCount">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalVoteCount"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:comment>The hasTotalVoteCount property represents the total number of votes gained by a party in the 2019 general election when compared to the previous election.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTurnout -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTurnout">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTurnout"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:comment>The hasTurnout property represents the turnout % in a constituency.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasVoteCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasVoteCount">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasVoteCount"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:comment>The hasVoteCount property represents thethe number of votes gained by a candidate in the 2019 general election.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#AllianceCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#AllianceCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasParty"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Alliance"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The AllianceCandidate class represents the set of individuals who are candidates for the Alliance party in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#AontuCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#AontuCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasParty"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Aontu"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The AontuCandidate class represents the set of individuals who are candidates for the Aonut party in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastEastCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastEastCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasConstituency"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastEast"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The BelfastEastCandidate class represents the set of individuals who are candidates for the BelfastEast constituency in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastEastElectedCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastEastElectedCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasMoreVotesThan"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasConstituency"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastEast"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The BelfastEastElectedCandidate class represents the set of individuals who are successfully elected candidates for the BelfastEast constituency in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastNorthCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastNorthCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasConstituency"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastNorth"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The BelfastNorthCandidate class represents the set of individuals who are candidates for the BelfastNorth constituency in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastNorthElectedCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastNorthElectedCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasMoreVotesThan"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasConstituency"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastNorth"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The BelfastNorthElectedCandidate class represents the set of individuals who are successfully elected candidates for the BelfastNorth constituency in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastSouthCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastSouthCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasConstituency"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastSouth"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The BelfastSouthCandidate class represents the set of individuals who are candidates for the BelfastSouth constituency in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastSouthElectedCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastSouthElectedCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasMoreVotesThan"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasConstituency"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastSouth"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The BelfastSouthElectedCandidate class represents the set of individuals who are successfully elected candidates for the BelfastSouth constituency in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastWestCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastWestCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasConstituency"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastWest"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The BelfastWestCandidate class represents the set of individuals who are candidates for the BelfastWest constituency in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastWestElectedCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastWestElectedCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasMoreVotesThan"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasConstituency"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastWest"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The BelfastWestElectedCandidate class represents the set of individuals who are successfully elected candidates for the BelfastWest constituency in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasConstituency"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Constituency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasParty"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The Candidate class represents the set of individuals who stood in Belfast constituencies in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Constituency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Constituency">
+        <rdfs:comment>The Constituency class represents the set of individual Belfast constituencies in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#DUPCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#DUPCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasParty"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#DUP"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The DUPCandidate class represents the set of individuals who are candidates for the DUP party in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#DUPConstituency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#DUPConstituency">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Constituency"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasElectedParty"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#DUP"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The DUPConstituency class represents the set of individual Belfast constituencies won by the DUP party in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#ElectedParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#ElectedParty">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalSeatsWon"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The Party class represents the set of individual parties who had candidates elected in Belfast constituencies in the the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#GainedSeatsParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#GainedSeatsParty">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalChangeInSeats"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The GainedSeatsParty class represents the set of individual parties who gained seats in the the 2019 general election when compared to the previous election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#GainedVotesCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#GainedVotesCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasPercentageChangeInVote"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The GainedVotesCandidate class represents the set of individuals who had a increase in votes in the 2019 general election when compared to the previous election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#GainedVotesParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#GainedVotesParty">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalPercentageChangeInVote"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The GainedVotesParty class represents the set of individual parties who gained votes in the the 2019 general election when compared to the previous election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#LostSeatsParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#LostSeatsParty">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalChangeInSeats"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The LostSeatsParty class represents the set of individual parties who lost seats in the the 2019 general election when compared to the previous election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#LostVotesCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#LostVotesCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasPercentageChangeInVote"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The LostVotesCandidate class represents the set of individuals who had a decrease in votes in the 2019 general election when compared to the previous election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#LostVotesParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#LostVotesParty">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasTotalPercentageChangeInVote"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The LostVotesParty class represents the set of individual parties who lost votes in the the 2019 general election when compared to the previous election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NationalistCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NationalistCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasParty"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NationalistParty"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The NationalistCandidate class represents the set of individuals who are candidates for parties with Nationalist political alignment  in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NationalistParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NationalistParty">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasAlignment"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Nationlist"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The NationlistParty class represents the set of individual parties who had a Nationalist political alignment in the the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NationlistConstituency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NationlistConstituency">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Constituency"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasElectedParty"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NationalistParty"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The NationalistConstituency class represents the set of individual Belfast constituencies won by parties with a Nationalist political alignment in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NondesignateCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NondesignateCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasParty"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NondesignateParty"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The NondesignateCandidate class represents the set of individuals who are candidates for parties with Nondesignate political alignment  in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NondesignateParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NondesignateParty">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasAlignment"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Nondesignate"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The NondesignateParty class represents the set of individual parties who had a Nondesignate political alignment in the the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasAlignment"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PoliticalAlignment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The Party class represents the set of individual parties who had candidates standing in Belfast constituencies in the the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PeopleBeforeProfitCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PeopleBeforeProfitCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasParty"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PeopleBeforeProfit"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The PeopleBeforeProfitCandidate class represents the set of individuals who are candidates for the PeopleBeforeProfit party in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PoliticalAlignment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PoliticalAlignment">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Nationlist"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Nondesignate"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Unionist"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The PoliticalAlignment class represents the different alignments of parties who stood in Belfast constituencies in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SDLPCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SDLPCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasParty"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SDLP"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The SDLPCandidate class represents the set of individuals who are candidates for the SDLP party in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SDLPConstituency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SDLPConstituency">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Constituency"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasElectedParty"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SDLP"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The SDLPConstituency class represents the set of individual Belfast constituencies won by the SDLP party in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SinnFeinCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SinnFeinCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasParty"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SinnFein"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The SinnFeinCandidate class represents the set of individuals who are candidates for the SinnFein party in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SinnFeinConstituency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SinnFeinConstituency">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Constituency"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasElectedParty"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SinnFein"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The SinnFeinConstituency class represents the set of individual Belfast constituencies won by the SinnFein party in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#UlsterUnionistCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#UlsterUnionistCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasParty"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#UlsterUnionist"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The UlsterUnionistCandidate class represents the set of individuals who are candidates for the UlsterUnionist party in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#UnionistCandidate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#UnionistCandidate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasParty"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#UnionistParty"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The UnionistCandidate class represents the set of individuals who are candidates for parties with Unionist political alignment  in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#UnionistConstituency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#UnionistConstituency">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Constituency"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasElectedParty"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#UnionistParty"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The UnionistConstituency class represents the set of individual Belfast constituencies won by parties with a Unionist political alignment in the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#UnionistParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#UnionistParty">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#hasAlignment"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Unionist"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The UnionistParty class represents the set of individual parties who had a Unionist political alignment in the the 2019 general election.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Alliance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Alliance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+        <hasAlignment rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Nondesignate"/>
+        <hasTotalAveragePercentageChangeOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.1</hasTotalAveragePercentageChangeOfVote>
+        <hasTotalChangeInSeats rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasTotalChangeInSeats>
+        <hasTotalNumberOfCandidates rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasTotalNumberOfCandidates>
+        <hasTotalPercentageCandidateSuccessRate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasTotalPercentageCandidateSuccessRate>
+        <hasTotalPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.5</hasTotalPercentageChangeInVote>
+        <hasTotalPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.3</hasTotalPercentageShareOfVote>
+        <hasTotalSeatsWon rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasTotalSeatsWon>
+        <hasTotalVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32547</hasTotalVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Aontu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Aontu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+        <hasAlignment rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Nationlist"/>
+        <hasTotalAveragePercentageChangeOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.7</hasTotalAveragePercentageChangeOfVote>
+        <hasTotalChangeInSeats rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasTotalChangeInSeats>
+        <hasTotalNumberOfCandidates rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasTotalNumberOfCandidates>
+        <hasTotalPercentageCandidateSuccessRate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasTotalPercentageCandidateSuccessRate>
+        <hasTotalPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.4</hasTotalPercentageChangeInVote>
+        <hasTotalPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</hasTotalPercentageShareOfVote>
+        <hasTotalSeatsWon rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasTotalSeatsWon>
+        <hasTotalVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2185</hasTotalVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastEast -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastEast">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Constituency"/>
+        <hasElectedParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#DUP"/>
+        <hasElectorate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66245</hasElectorate>
+        <hasMajority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1819</hasMajority>
+        <hasOutcomeStatus>Hold</hasOutcomeStatus>
+        <hasTurnout rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.1</hasTurnout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastNorth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastNorth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Constituency"/>
+        <hasElectedParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SinnFein"/>
+        <hasElectorate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72225</hasElectorate>
+        <hasMajority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1943</hasMajority>
+        <hasOutcomeStatus>Gain</hasOutcomeStatus>
+        <hasTurnout rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">67.9</hasTurnout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastSouth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastSouth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Constituency"/>
+        <hasElectedParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SDLP"/>
+        <hasElectorate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">69984</hasElectorate>
+        <hasMajority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15401</hasMajority>
+        <hasOutcomeStatus>Gain</hasOutcomeStatus>
+        <hasTurnout rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">67.7</hasTurnout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastWest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastWest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Constituency"/>
+        <hasElectedParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SinnFein"/>
+        <hasElectorate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65644</hasElectorate>
+        <hasMajority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14672</hasMajority>
+        <hasOutcomeStatus>Hold</hasOutcomeStatus>
+        <hasTurnout rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.1</hasTurnout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#CarlMcClean -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#CarlMcClean">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <hasConstituency rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastEast"/>
+        <hasParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#UlsterUnionist"/>
+        <hasPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.6</hasPercentageChangeInVote>
+        <hasPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.9</hasPercentageShareOfVote>
+        <hasVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2516</hasVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#ChrisMcHugh -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#ChrisMcHugh">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <hasConstituency rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastSouth"/>
+        <hasParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Aontu"/>
+        <hasPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</hasPercentageChangeInVote>
+        <hasPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</hasPercentageShareOfVote>
+        <hasVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">550</hasVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#ClaireHanna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#ClaireHanna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <hasConstituency rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastSouth"/>
+        <hasMoreVotesThan rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#ChrisMcHugh"/>
+        <hasMoreVotesThan rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#EmmaLittlePengelly"/>
+        <hasMoreVotesThan rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#MichaelHenderson"/>
+        <hasMoreVotesThan rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PaulaBradshaw"/>
+        <hasParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SDLP"/>
+        <hasPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">31.3</hasPercentageChangeInVote>
+        <hasPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">57.2</hasPercentageShareOfVote>
+        <hasVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27079</hasVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#DUP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#DUP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+        <hasAlignment rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Unionist"/>
+        <hasTotalAveragePercentageChangeOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-3.9</hasTotalAveragePercentageChangeOfVote>
+        <hasTotalChangeInSeats rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</hasTotalChangeInSeats>
+        <hasTotalNumberOfCandidates rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasTotalNumberOfCandidates>
+        <hasTotalPercentageCandidateSuccessRate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</hasTotalPercentageCandidateSuccessRate>
+        <hasTotalPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-15.5</hasTotalPercentageChangeInVote>
+        <hasTotalPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">33.2</hasTotalPercentageShareOfVote>
+        <hasTotalSeatsWon rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasTotalSeatsWon>
+        <hasTotalVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58907</hasTotalVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#DonnamarieHiggins -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#DonnamarieHiggins">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <hasConstituency rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastWest"/>
+        <hasParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Alliance"/>
+        <hasPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.1</hasPercentageChangeInVote>
+        <hasPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1882</hasPercentageShareOfVote>
+        <hasPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.9</hasPercentageShareOfVote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#EmmaLittlePengelly -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#EmmaLittlePengelly">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <hasConstituency rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastSouth"/>
+        <hasParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#DUP"/>
+        <hasPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-5.8</hasPercentageChangeInVote>
+        <hasPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.7</hasPercentageShareOfVote>
+        <hasVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11678</hasVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#FrankMcCoubrey -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#FrankMcCoubrey">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <hasConstituency rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastWest"/>
+        <hasParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#DUP"/>
+        <hasPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPercentageChangeInVote>
+        <hasPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.5</hasPercentageShareOfVote>
+        <hasVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5220</hasVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#GavinRobinson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#GavinRobinson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <hasConstituency rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastEast"/>
+        <hasMoreVotesThan rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#CarlMcClean"/>
+        <hasMoreVotesThan rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NaomiLong"/>
+        <hasParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#DUP"/>
+        <hasPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-6.6</hasPercentageChangeInVote>
+        <hasPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.2</hasPercentageShareOfVote>
+        <hasVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20874</hasVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#GerryCarroll -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#GerryCarroll">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <hasConstituency rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastWest"/>
+        <hasParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PeopleBeforeProfit"/>
+        <hasPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.8</hasPercentageChangeInVote>
+        <hasPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</hasPercentageShareOfVote>
+        <hasVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6194</hasVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#JohnFinucane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#JohnFinucane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <hasConstituency rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastNorth"/>
+        <hasMoreVotesThan rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NigelDodds"/>
+        <hasMoreVotesThan rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NualaMcAllister"/>
+        <hasParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SinnFein"/>
+        <hasPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.4</hasPercentageChangeInVote>
+        <hasPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">47.1</hasPercentageShareOfVote>
+        <hasVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23078</hasVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#MichaelHenderson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#MichaelHenderson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <hasConstituency rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastSouth"/>
+        <hasParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#UlsterUnionist"/>
+        <hasPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-0.8</hasPercentageChangeInVote>
+        <hasPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.7</hasPercentageShareOfVote>
+        <hasVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1259</hasVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#MonicaDigney -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#MonicaDigney">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <hasConstituency rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastWest"/>
+        <hasParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Aontu"/>
+        <hasPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.2</hasPercentageChangeInVote>
+        <hasPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.2</hasPercentageShareOfVote>
+        <hasVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1635</hasVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NaomiLong -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NaomiLong">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <hasConstituency rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastEast"/>
+        <hasParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Alliance"/>
+        <hasPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.9</hasPercentageChangeInVote>
+        <hasPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">44.9</hasPercentageShareOfVote>
+        <hasVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19055</hasVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Nationlist -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Nationlist"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NigelDodds -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NigelDodds">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <hasConstituency rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastNorth"/>
+        <hasParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#DUP"/>
+        <hasPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-3.1</hasPercentageChangeInVote>
+        <hasPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">43.1</hasPercentageShareOfVote>
+        <hasVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21135</hasVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Nondesignate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Nondesignate"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NualaMcAllister -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#NualaMcAllister">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <hasConstituency rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastNorth"/>
+        <hasParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Alliance"/>
+        <hasPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.4</hasPercentageChangeInVote>
+        <hasPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.8</hasPercentageShareOfVote>
+        <hasVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4824</hasVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PaulDoherty -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PaulDoherty">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <hasConstituency rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastWest"/>
+        <hasParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SDLP"/>
+        <hasPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7</hasPercentageChangeInVote>
+        <hasPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.7</hasPercentageShareOfVote>
+        <hasVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2985</hasVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PaulMaskey -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PaulMaskey">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <hasConstituency rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastWest"/>
+        <hasMoreVotesThan rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#DonnamarieHiggins"/>
+        <hasMoreVotesThan rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#FrankMcCoubrey"/>
+        <hasMoreVotesThan rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#GerryCarroll"/>
+        <hasMoreVotesThan rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#MonicaDigney"/>
+        <hasMoreVotesThan rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PaulDoherty"/>
+        <hasParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SinnFein"/>
+        <hasPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-12.9</hasPercentageChangeInVote>
+        <hasPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">53.8</hasPercentageShareOfVote>
+        <hasVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20866</hasVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PaulaBradshaw -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PaulaBradshaw">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+        <hasConstituency rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#BelfastSouth"/>
+        <hasParty rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Alliance"/>
+        <hasPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-3.9</hasPercentageChangeInVote>
+        <hasPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.3</hasPercentageShareOfVote>
+        <hasVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6786</hasVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PeopleBeforeProfit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PeopleBeforeProfit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+        <hasAlignment rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Nationlist"/>
+        <hasTotalAveragePercentageChangeOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.8</hasTotalAveragePercentageChangeOfVote>
+        <hasTotalChangeInSeats rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasTotalChangeInSeats>
+        <hasTotalNumberOfCandidates rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasTotalNumberOfCandidates>
+        <hasTotalPercentageCandidateSuccessRate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasTotalPercentageCandidateSuccessRate>
+        <hasTotalPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.8</hasTotalPercentageChangeInVote>
+        <hasTotalPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.5</hasTotalPercentageShareOfVote>
+        <hasTotalSeatsWon rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasTotalSeatsWon>
+        <hasTotalVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6194</hasTotalVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SDLP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SDLP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+        <hasAlignment rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Nationlist"/>
+        <hasTotalAveragePercentageChangeOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</hasTotalAveragePercentageChangeOfVote>
+        <hasTotalChangeInSeats rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasTotalChangeInSeats>
+        <hasTotalNumberOfCandidates rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasTotalNumberOfCandidates>
+        <hasTotalPercentageCandidateSuccessRate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</hasTotalPercentageCandidateSuccessRate>
+        <hasTotalPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.0</hasTotalPercentageChangeInVote>
+        <hasTotalPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.9</hasTotalPercentageShareOfVote>
+        <hasTotalSeatsWon rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasTotalSeatsWon>
+        <hasTotalVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30064</hasTotalVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SinnFein -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#SinnFein">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+        <hasAlignment rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Nationlist"/>
+        <hasTotalAveragePercentageChangeOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-3.8</hasTotalAveragePercentageChangeOfVote>
+        <hasTotalChangeInSeats rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasTotalChangeInSeats>
+        <hasTotalNumberOfCandidates rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasTotalNumberOfCandidates>
+        <hasTotalPercentageCandidateSuccessRate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</hasTotalPercentageCandidateSuccessRate>
+        <hasTotalPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-7.5</hasTotalPercentageChangeInVote>
+        <hasTotalPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.7</hasTotalPercentageShareOfVote>
+        <hasTotalSeatsWon rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasTotalSeatsWon>
+        <hasTotalVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43944</hasTotalVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#UlsterUnionist -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#UlsterUnionist">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+        <hasAlignment rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Unionist"/>
+        <hasTotalAveragePercentageChangeOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9</hasTotalAveragePercentageChangeOfVote>
+        <hasTotalChangeInSeats rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasTotalChangeInSeats>
+        <hasTotalNumberOfCandidates rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasTotalNumberOfCandidates>
+        <hasTotalPercentageCandidateSuccessRate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasTotalPercentageCandidateSuccessRate>
+        <hasTotalPercentageChangeInVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.8</hasTotalPercentageChangeInVote>
+        <hasTotalPercentageShareOfVote rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.1</hasTotalPercentageShareOfVote>
+        <hasTotalSeatsWon rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasTotalSeatsWon>
+        <hasTotalVoteCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3775</hasTotalVoteCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Unionist -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Unionist">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#PoliticalAlignment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Candidate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Constituency"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shawr/ontologies/2022/10/RyanShaw_B00634437_CW1#Party"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
